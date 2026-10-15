@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SecureAuth user dashboard">
+    <title>Dashboard | SecureAuth</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo">
+            <span class="logo-icon">🔐</span>
+            <span>SecureAuth</span>
+        </div>
+
+        <nav class="navigation">
+            <a href="dashboard.html" class="active">Dashboard</a>
+            <a href="#" id="logoutLink">Logout</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+
+        <section class="dashboard-welcome">
+            <span class="welcome-badge">USER DASHBOARD</span>
+
+            <h1>Welcome, <span id="userName">User</span>! 👋</h1>
+
+            <p>
+                You have successfully accessed your dashboard.
+                Manage your account and explore your personal space.
+            </p>
+        </section>
+
+        <section class="dashboard-grid">
+
+            <article class="dashboard-card">
+                <div class="dashboard-card-icon">👤</div>
+                <h2>Account Details</h2>
+
+                <div class="account-detail">
+                    <span>Full Name</span>
+                    <strong id="dashboardName">Loading...</strong>
+                </div>
+
+                <div class="account-detail">
+                    <span>Email Address</span>
+                    <strong id="dashboardEmail">Loading...</strong>
+                </div>
+            </article>
+
+            <article class="dashboard-card">
+                <div class="dashboard-card-icon">🛡️</div>
+                <h2>Account Status</h2>
+
+                <div class="status-indicator">
+                    <span class="status-dot"></span>
+                    <strong>Logged In</strong>
+                </div>
+
+                <p class="card-description">
+                    Your demo session is currently active.
+                </p>
+            </article>
+
+            <article class="dashboard-card">
+                <div class="dashboard-card-icon">🔒</div>
+                <h2>Protected Area</h2>
+
+                <p class="card-description">
+                    This page is intended for authenticated users.
+                    If you log out, you will return to the login page.
+                </p>
+
+                <button type="button" id="dashboardLogout"
+                        class="login-button">
+                    Logout <span>→</span>
+                </button>
+            </article>
+
+        </section>
+
+        <p id="dashboardMessage" class="message"
+           role="status" aria-live="polite"></p>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>
+            © 2026 SecureAuth. Login Authentication System Project.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
